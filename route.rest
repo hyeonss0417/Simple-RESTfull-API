@@ -1,0 +1,29 @@
+GET http://localhost:3002/subscribers
+
+###
+
+GET http://localhost:3002/subscribers/5ee8f7ce0ca5615ba815b0b2
+
+
+###
+
+POST http://localhost:3002/subscribers
+Content-Type: application/json
+
+{
+    "name": "Test Person5",
+    "subscribedToChannel": "Phaphaya"
+}
+
+###
+
+DELETE http://localhost:3002/subscribers/5ee8f7ce0ca5615ba815b0b2
+
+###
+PATCH http://localhost:3002/subscribers/5ee8f930c0e6665dcb9fb75b
+Content-Type: application/json
+
+{
+    "name": "New name"
+}
+
