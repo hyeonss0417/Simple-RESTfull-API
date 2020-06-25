@@ -1,8 +1,47 @@
-GET http://localhost:3002/subscribers
+
+POST http://localhost:3002/url
+Content-Type: application/json
+
+{
+    "longUrl": "https://www.naver.com/"
+}
+
 
 ###
 
-GET http://localhost:3002/subscribers/5ee8f7ce0ca5615ba815b0b2
+GET http://localhost:3002/url/g4p88nqyz3u
+
+###
+
+GET http://localhost:3002/subscribers
+
+###
+GET http://localhost:3002/board
+
+###
+
+POST http://localhost:3002/board
+Content-Type: application/json
+
+{
+    "title": "Test Person9",
+    "contents": "Phaphaya",
+    "author": "sdifsjsdsoi"
+}
+
+###
+
+POST http://localhost:3002/board/5eea3ee2087baa29e01ac367/comment
+Content-Type: application/json
+
+{
+    "contents": "fewwq",
+    "author": "asdfdsfsdfds"
+}
+
+###
+
+GET http://localhost:3002/subscribers/5eea2bc6d2a4f80389bff492
 
 
 ###
@@ -11,13 +50,15 @@ POST http://localhost:3002/subscribers
 Content-Type: application/json
 
 {
-    "name": "Test Person5",
-    "subscribedToChannel": "Phaphaya"
+    "name": "Test Person9",
+    "subscribedToChannel": "Phaphaya",
+    "website": "sdifsjsdsoi",
+    "age": 18
 }
 
 ###
 
-DELETE http://localhost:3002/subscribers/5ee8f7ce0ca5615ba815b0b2
+DELETE http://localhost:3002/subscribers/5eea2c13d2a4f80389bff493
 
 ###
 PATCH http://localhost:3002/subscribers/5ee8f930c0e6665dcb9fb75b

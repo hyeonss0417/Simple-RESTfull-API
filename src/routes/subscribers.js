@@ -6,7 +6,7 @@ const subscribersRouter = express.Router();
 // Getting All
 subscribersRouter.get("/", async (req, res) => {
   try {
-    const subscribers = await Subscriber.find();
+    const subscribers = await Subscriber.findAll().sort({ createdAt: "desc" });
     res.json(subscribers);
   } catch (err) {
     res.status(500).json({ message: err.message });
